@@ -5,6 +5,6 @@
 #ifndef CPP_SERVER_UTIL_H
 #define CPP_SERVER_UTIL_H
 
-void errif(bool, const char*);
+void ErrorIf(bool, const char *);
 
 #endif //CPP_SERVER_UTIL_H

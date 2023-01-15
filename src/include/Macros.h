@@ -2,8 +2,10 @@
 // Created by Dawen on 1/8/23.
 //
 #pragma once
+
 #include <cassert>
 #include <stdexcept>
+
 #define OS_LINUX
 
 // Macros to disable copying and moving
