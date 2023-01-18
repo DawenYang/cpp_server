@@ -40,7 +40,7 @@ public:
 
     void SetReadyEvents(int ev);
 
-    void SetReadyCallback(std::function<void()> const &callback);
+    void SetReadCallback(std::function<void()> const &callback);
 
     void SetWriteCallback(std::function<void()> const &callback);
 
