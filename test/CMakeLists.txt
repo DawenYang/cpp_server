@@ -22,7 +22,7 @@ foreach (cpp_server_test_source ${cpp_server_test_sources})
     string(REPLACE ".cpp" "" cpp_server_test_name ${cpp_server_test_filename})
 
     # Add the test target separately and as part of "make check-tests".
-    add_executable(${cpp_server_test_name} EXCLUDE_FROM_ALL ${cpp_server_test_source})
+    add_executable(${cpp_server_test_name} EXCLUDE_FROM_ALL ${cpp_server_test_source} chat_client.cpp chat_server.cpp)
     add_dependencies(build-tests ${cpp_server_test_name})
     add_dependencies(check-tests ${cpp_server_test_name})
 
