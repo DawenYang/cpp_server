@@ -16,16 +16,16 @@ int main() {
                 int clnt_fd = conn->GetSocket()->GetFd();
                 std::cout << "New connection fd: " << clnt_fd << std::endl;
                 clients[clnt_fd] = conn;
-                for(auto &each : clients){
+                for (auto &each: clients) {
                     Connection *client = each.second;
                     client->Send(conn->ReadBuffer());
                 }
             });
 
     server->OnMessage(
-            [&](Connection *conn){
+            [&](Connection *conn) {
                 std::cout << "Message from client " << conn->ReadBuffer() << std::endl;
-                for(auto &each : clients){
+                for (auto &each: clients) {
                     Connection *client = each.second;
                     client->Send(conn->ReadBuffer());
                 }
