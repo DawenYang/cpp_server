@@ -6,7 +6,7 @@
 #define CPP_SERVER_TYPES_H
 
 #include <stdint.h>
-#include <string.h>
+#include <string.h>// memset
 #include <string>
 
 #ifdef NDEBUG
@@ -33,11 +33,8 @@ namespace muduo {
     }
 
 #if !defined(NDEBUG) && !defined(GOOGLE_PROTOBUF_NO_RTTI)
-    assert(f
-    == NULL || dynamic_cast
-    <To>(f)
-    != NULL)
+    assert(f == NULL || dynamic_cast<To>(f) != NULL);
 #endif
-}
+}// namespace muduo
 
-#endif //CPP_SERVER_TYPES_H
+#endif//CPP_SERVER_TYPES_H

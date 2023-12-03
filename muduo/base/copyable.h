@@ -12,6 +12,6 @@ namespace muduo {
 
         ~copyable() = default;
     };
-}  // namespace muduo
+}// namespace muduo
 
-#endif  // CPP_SERVER_COPYABLE_H
+#endif// CPP_SERVER_COPYABLE_H

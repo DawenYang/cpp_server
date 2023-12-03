@@ -15,5 +15,5 @@ namespace muduo {
         noncopyable() = default;
         ~noncopyable() = default;
     };
-}  // namespace muduo
-#endif  // CPP_SERVER_NONCOPYABLE_H
+}// namespace muduo
+#endif// CPP_SERVER_NONCOPYABLE_H

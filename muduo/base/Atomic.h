@@ -16,14 +16,12 @@ namespace muduo {
         class AtomicIntegerT : noncopyable {
         public:
             AtomicIntegerT() : value_(0) {
-
             }
 
             AtomicIntegerT(const AtomicIntegerT &that) : value_(that.get()) {}
 
             AtomicIntegerT &operator=(const AtomicIntegerT &that) {
-                getAndSet(that.get())
-                return *this;
+                getAndSet(that.get()) return *this;
             }
 
             T get() {
@@ -65,9 +63,9 @@ namespace muduo {
         private:
             volatile T value_;
         };
-    }  // namespace detail
+    }// namespace detail
     typedef detail::AtomicIntegerT<int32_t> AtomicInt32;
     typedef detail::AtomicIntegerT<int64_t> AtomicInt64;
-}  // namespace muduo
+}// namespace muduo
 
-#endif  // CPP_SERVER_ATOMIC_H
+#endif// CPP_SERVER_ATOMIC_H
